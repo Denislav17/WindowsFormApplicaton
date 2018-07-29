@@ -1,0 +1,50 @@
+﻿<Window x:Class="firstWpfapp.ControlPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:firstWpfapp"
+        mc:Ignorable="d"
+        Title="Control Panel" Height="590.202" Width="676.857" Background="#8F2D56" MinWidth="699.857" MinHeight="489.202" WindowStyle="ThreeDBorderWindow" Visibility="Visible" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid Background="#8F2D56">
+        <Grid HorizontalAlignment="Left" Height="561" VerticalAlignment="Top" Width="694">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="565*"/>
+                <ColumnDefinition Width="129*"/>
+            </Grid.ColumnDefinitions>
+            <Separator HorizontalAlignment="Left" Height="100" Margin="64,233,0,0" VerticalAlignment="Top" Width="558" RenderTransformOrigin="0.5,0.5" Background="White" Grid.ColumnSpan="2">
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+            <Separator HorizontalAlignment="Left" Height="100" Margin="0,232,0,0" VerticalAlignment="Top" Width="694" RenderTransformOrigin="-0.537,0.196" Background="White" Grid.ColumnSpan="2"/>
+            <!-- Add Contact Button -->
+            <Button x:Name="btnAddContact"  HorizontalAlignment="Left" Margin="106,59,0,0" VerticalAlignment="Top" Width="133" Height="133" Background="#8F2D56" Foreground="White" FontFamily="Tahoma" FontSize="24" Click="Button_Click_1" BorderBrush="#8F2D56">
+                <Image Source="C:\Users\my\Desktop\plus.png" />
+            </Button>
+            <Label x:Name="lblAdd" HorizontalContentAlignment="Center" Content="Add Contact" HorizontalAlignment="Left" Margin="106,204,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="22" Width="133" Foreground="White"/>
+            <!-- View Contact List Button -->
+            <Button x:Name="btnViewContacts"  HorizontalAlignment="Left" Margin="448,59,0,0" VerticalAlignment="Top" Width="133" Height="133" Background="{x:Null}" Foreground="White" FontFamily="Tahoma" FontSize="24" Click="btnViewContacts_Click" Grid.ColumnSpan="2" BorderBrush="{x:Null}">
+                <Image Source="C:\Users\my\Desktop\contactlist.jpg" />
+            </Button>
+            <Label x:Name="lblViewContacts" HorizontalContentAlignment="Center" Content="View Contacts" HorizontalAlignment="Left" Margin="448,204,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="22" Width="150" Foreground="White" Grid.ColumnSpan="2"/>
+            <!-- Open Calandar Button -->
+            <Button x:Name="btnCalendar" HorizontalAlignment="Left" Margin="106,332,0,0" VerticalAlignment="Top" Width="133" Height="133" FontFamily="Tahoma" FontSize="24" Click="btnCalendar_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{x:Null}">
+                <Image Source="C:\Users\my\Desktop\calendar.png" />
+            </Button>
+            <Label x:Name="lblCalendar" HorizontalContentAlignment="Center" Content="Open Calendar" HorizontalAlignment="Left" Margin="94,481,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="22" Width="160" Foreground="White"/>
+            <!-- Exit Button -->
+            <Button x:Name="btnExit" HorizontalAlignment="Left" Margin="448,332,0,0" VerticalAlignment="Top" Width="133" Height="133" Background="{x:Null}" Foreground="{x:Null}" FontFamily="Tahoma" FontSize="24" Click="Button_Click" Grid.ColumnSpan="2" BorderBrush="{x:Null}">
+                <Image Source="C:\Users\my\Desktop\logout.png" />
+            </Button>
+            <Label x:Name="lblExit" HorizontalContentAlignment="Center" Content="Logout" HorizontalAlignment="Left" Margin="438,481,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="22" Width="160" Foreground="White" Grid.ColumnSpan="2"/>
+
+        </Grid>
+    </Grid>
+
+</Window>
