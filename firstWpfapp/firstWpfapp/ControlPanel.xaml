@@ -24,22 +24,22 @@
             </Separator>
             <Separator HorizontalAlignment="Left" Height="100" Margin="0,232,0,0" VerticalAlignment="Top" Width="694" RenderTransformOrigin="-0.537,0.196" Background="White" Grid.ColumnSpan="2"/>
             <!-- Add Contact Button -->
-            <Button x:Name="btnAddContact"  HorizontalAlignment="Left" Margin="106,59,0,0" VerticalAlignment="Top" Width="133" Height="133" Background="#8F2D56" Foreground="White" FontFamily="Tahoma" FontSize="24" Click="Button_Click_1" BorderBrush="#8F2D56">
+            <Button x:Name="btnAddContact"  HorizontalAlignment="Left" Margin="106,59,0,0" VerticalAlignment="Top" Width="133" Height="133" Background="#8F2D56" Foreground="White" FontFamily="Tahoma" FontSize="24" Click="btnAddContact_Click" BorderBrush="#8F2D56">
                 <Image Source="C:\Users\my\Desktop\plus.png" />
             </Button>
             <Label x:Name="lblAdd" HorizontalContentAlignment="Center" Content="Add Contact" HorizontalAlignment="Left" Margin="106,204,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="22" Width="133" Foreground="White"/>
             <!-- View Contact List Button -->
-            <Button x:Name="btnViewContacts"  HorizontalAlignment="Left" Margin="448,59,0,0" VerticalAlignment="Top" Width="133" Height="133" Background="{x:Null}" Foreground="White" FontFamily="Tahoma" FontSize="24" Click="btnViewContacts_Click" Grid.ColumnSpan="2" BorderBrush="{x:Null}">
+            <Button x:Name="btnViewContacts"  HorizontalAlignment="Left" Margin="448,59,0,0" VerticalAlignment="Top" Width="133" Height="133" FontFamily="Tahoma" FontSize="24" Click="btnViewContacts_Click" Grid.ColumnSpan="2" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" >
                 <Image Source="C:\Users\my\Desktop\contactlist.jpg" />
             </Button>
             <Label x:Name="lblViewContacts" HorizontalContentAlignment="Center" Content="View Contacts" HorizontalAlignment="Left" Margin="448,204,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="22" Width="150" Foreground="White" Grid.ColumnSpan="2"/>
             <!-- Open Calandar Button -->
-            <Button x:Name="btnCalendar" HorizontalAlignment="Left" Margin="106,332,0,0" VerticalAlignment="Top" Width="133" Height="133" FontFamily="Tahoma" FontSize="24" Click="btnCalendar_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{x:Null}">
+            <Button x:Name="btnCalendar" HorizontalAlignment="Left" Margin="106,332,0,0" VerticalAlignment="Top" Width="133" Height="133" FontFamily="Tahoma" FontSize="24" Click="btnCalendar_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" >
                 <Image Source="C:\Users\my\Desktop\calendar.png" />
             </Button>
             <Label x:Name="lblCalendar" HorizontalContentAlignment="Center" Content="Open Calendar" HorizontalAlignment="Left" Margin="94,481,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="22" Width="160" Foreground="White"/>
             <!-- Exit Button -->
-            <Button x:Name="btnExit" HorizontalAlignment="Left" Margin="448,332,0,0" VerticalAlignment="Top" Width="133" Height="133" Background="{x:Null}" Foreground="{x:Null}" FontFamily="Tahoma" FontSize="24" Click="Button_Click" Grid.ColumnSpan="2" BorderBrush="{x:Null}">
+            <Button x:Name="btnExit" HorizontalAlignment="Left" Margin="448,332,0,0" VerticalAlignment="Top" Width="133" Height="133" FontFamily="Tahoma" FontSize="24" Click="btnExit_Click" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
                 <Image Source="C:\Users\my\Desktop\logout.png" />
             </Button>
             <Label x:Name="lblExit" HorizontalContentAlignment="Center" Content="Logout" HorizontalAlignment="Left" Margin="438,481,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="22" Width="160" Foreground="White" Grid.ColumnSpan="2"/>
