@@ -59,6 +59,7 @@ namespace firstWpfapp
             String confirmPassword = txtConfirmPassword.Password;
             DateTime regDate = DateTime.Now;
 
+            Users user = new Users();
             
             if(  firstName.Length<2||lastName.Length<2||
                    company.Length<2||position.Length<2||
@@ -70,7 +71,14 @@ namespace firstWpfapp
             }
             else
             {
-                cs.regUser(firstName, lastName, username, password, company, position, regDate);
+                user.setFirstName(firstName);
+                user.setLastName(lastName);
+                user.setUsername(username);
+                user.setPassword(password);
+                user.setCompany(company);
+                user.setPosition(position);
+                user.setRegDate(regDate);
+                cs.regUser(user);
                 MessageBox.Show("Successfully registered!");
                 this.Close();
             }

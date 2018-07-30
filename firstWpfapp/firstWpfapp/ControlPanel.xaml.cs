@@ -37,7 +37,7 @@ namespace firstWpfapp
 
         private void btnViewContacts_Click(object sender, RoutedEventArgs e)
         {
-            //to implement open form to view contact register
+            ContactsBasket cb = new ContactsBasket();
         }
 
         private void btnCalendar_Click(object sender, RoutedEventArgs e)

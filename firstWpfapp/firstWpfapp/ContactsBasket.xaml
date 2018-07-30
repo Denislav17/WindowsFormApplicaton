@@ -1,0 +1,22 @@
+﻿<Window x:Class="firstWpfapp.ContactsBasket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:firstWpfapp"
+        mc:Ignorable="d"
+        Title="Contacts Basket" Height="403.773" Width="673.857" Background="#8F2D56" MinWidth="699.857" MinHeight="489.202" WindowStyle="ThreeDBorderWindow" Visibility="Visible" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid Margin="0,0,17,10">
+        <Grid x:Name="grid"  HorizontalAlignment="Left" Height="440" Margin="10,10,0,0" VerticalAlignment="Top" Width="667" Background="#218380">
+            <Grid HorizontalAlignment="Left" Height="371" Margin="425,32,0,0" VerticalAlignment="Top" Width="217" Background="#8F2D56">
+                <Image HorizontalAlignment="Left" Height="100" Margin="58,22,0,0" VerticalAlignment="Top" Width="100" Source="C:\Users\my\Desktop\contacticon.png"/>
+                <TextBox x:Name="txtFirstName" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="31,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151" FontFamily="Lato Light" FontSize="16" Background="#218380" Foreground="White"/>
+                <TextBox x:Name="txtLastName" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Height="23" Margin="31,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151" FontFamily="Lato Light" FontSize="16" Background="#218380" Foreground="White"/>
+                <TextBox x:Name="txtCompany" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="31,223,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"  FontFamily="Lato Light" FontSize="16" Background="#218380" Foreground="White"/>
+                <TextBox x:Name="txtPosition" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="31,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151" FontFamily="Lato Light" FontSize="16" Background="#218380" Foreground="White"/>
+            </Grid>
+            <ComboBox x:Name="usersList"  HorizontalAlignment="Left" Margin="98,117,0,0" VerticalAlignment="Top" Width="247" Height="24"/>
+            <Label x:Name="lblSelectUser" Content="Select a user" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="130,60,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="24" Foreground="White" Height="41" Width="180" />
+        </Grid>
+    </Grid>
+</Window>

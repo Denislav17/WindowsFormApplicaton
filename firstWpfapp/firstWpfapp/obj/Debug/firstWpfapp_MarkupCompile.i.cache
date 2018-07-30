@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\my\source\repos\firstWpfapp\firstWpfapp\obj\Debug\
+C:\Users\my\source\repos\firstWpfapp\firstWpfapp\obj\Debug\
 firstWpfapp
 none
 false
 DEBUG;TRACE
-c:\users\my\source\repos\firstWpfapp\firstWpfapp\App.xaml
-31620113256
+C:\Users\my\source\repos\firstWpfapp\firstWpfapp\App.xaml
+4391741922
 
-13-438286065
+14-88072646
 131569487696
-ControlPanel.xaml;LoginPage.xaml;RegisterPage.xaml;
+ContactsBasket.xaml;ControlPanel.xaml;LoginPage.xaml;RegisterPage.xaml;
 
-True
+False
 

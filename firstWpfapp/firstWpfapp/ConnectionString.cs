@@ -65,7 +65,35 @@ namespace firstWpfapp
             return users;
         }
 
-        public void regUser(String firstName, String lastName, String username, String password, String company, String position, DateTime regDate)
+        public List<Users> getUserData()
+        {
+            List<Users> users = new List<Users>();
+            SqlCommand command;
+            SqlDataReader userDataReader;
+            String sql;
+
+            sql = "Select firstName,lastName,companyName,position from UserData";
+            command = new SqlCommand(sql, cnn);
+
+            userDataReader = command.ExecuteReader();
+
+            while(userDataReader.Read())
+            {
+                Users user = new Users();
+                user.setFirstName(userDataReader.GetValue(0).ToString());
+                user.setLastName(userDataReader.GetValue(1).ToString());
+                user.setCompany(userDataReader.GetValue(2).ToString());
+                user.setPosition(userDataReader.GetValue(3).ToString());
+
+                users.Add(user);
+                
+            }
+
+            userDataReader.Close();
+            return users;
+        }
+
+        public void regUser(Users user)
         {           
             SqlCommand command;
             SqlDataAdapter adapter = new SqlDataAdapter();
@@ -73,10 +101,10 @@ namespace firstWpfapp
 
             sql = "Insert into UserData (ID,firstName,lastName,username,password,companyName,position,regDate) " +
                 "values("+ usersCount + ",'" 
-                + firstName + "','" + lastName + "','"
-                + username + "','" + password + "','"
-                + company  + "','" + position + "','"
-                + regDate + "')";
+                + user.getFirstName() + "','" + user.getLastName() + "','"
+                + user.getUsername() + "','" + user.getPassword() + "','"
+                + user.getCompany()  + "','" + user.getPosition() + "','"
+                + user.getRegDate() + "')";
 
             command = new SqlCommand(sql, cnn);
 

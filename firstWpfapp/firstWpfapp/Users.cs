@@ -14,13 +14,17 @@ namespace firstWpfapp
 
         }
 
-        private String _username;
+        private String _firstName;
+        private String _lastName;
+        private String _userName;
         private String _password;
-        private DateTime _lastLogged;
+        private String _company;
+        private String _position;
+        private DateTime _regDate;
 
         public void setUsername(string username)
         {
-            _username = username;
+            _userName = username;
         }
 
         public void setPassword(string password)
@@ -30,7 +34,7 @@ namespace firstWpfapp
 
         public String getUsername()
         {
-            return _username;
+            return _userName;
         }
 
         public String getPassword()
@@ -38,14 +42,54 @@ namespace firstWpfapp
             return _password;
         }
 
-        public void setLastLogged(DateTime lastLogged)
+        public void setFirstName(string fname)
         {
-            _lastLogged = lastLogged;
+            _firstName = fname;
         }
 
-        public DateTime getLastLogged()
+        public String getFirstName()
         {
-            return _lastLogged;
+            return _firstName;
+        }
+
+        public void setLastName(string lname)
+        {
+            _lastName = lname;
+        }
+
+        public String getLastName()
+        {
+            return _lastName;
+        }
+
+        public void setCompany(string company)
+        {
+            _company = company;
+        }
+
+        public String getCompany()
+        {
+            return _company;
+        }
+
+        public void setPosition(string position)
+        {
+            _position = position;
+        }
+
+        public String getPosition()
+        {
+            return _position;
+        }
+
+        public void setRegDate(DateTime regDate)
+        {
+            _regDate = regDate;
+        }
+
+        public DateTime getRegDate()
+        {
+            return _regDate;
         }
 
 
