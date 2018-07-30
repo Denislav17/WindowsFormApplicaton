@@ -33,20 +33,47 @@ namespace firstWpfapp
             this.Close();
         }
 
+        private void btnSupport_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Just so you know that: \n" +
+                "First name \n" +
+                "Last name \n" +
+                "Company \n" +
+                "Position \n" +
+                "-- Must be longer than 2 characters! \n" +
+                " - Username must be longer than 4 characters - \n" +
+                " - Password must be longer than 6 characters - \n" +
+                " - Confirm password must be the same as password - \n" +
+                "Please make sure everything is correct in order to be registered! ");
+
+        }
+
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
-            String username = txtName.Text;
-            String password = txtPassword.Password;
             String firstName = txtDisplayFirstName.Text;
             String lastName = txtDisplayLastName.Text;
             String company = txtCompanyName.Text;
             String position = txtPosition.Text;
-
-
+            String username = txtName.Text;
+            String password = txtPassword.Password;
+            String confirmPassword = txtConfirmPassword.Password;
             DateTime regDate = DateTime.Now;
-            cs.regUser(firstName,lastName,username, password,company,position, regDate);
-            MessageBox.Show("Successfully registered!");
-            this.Close();
+
+            
+            if(  firstName.Length<2||lastName.Length<2||
+                   company.Length<2||position.Length<2||
+                  username.Length<4||
+                  password.Length<6||
+                 !confirmPassword.Equals(password))
+            {
+                MessageBox.Show("Please verify the fields or click the support button next to Registration!");
+            }
+            else
+            {
+                cs.regUser(firstName, lastName, username, password, company, position, regDate);
+                MessageBox.Show("Successfully registered!");
+                this.Close();
+            }
 
         }
     }

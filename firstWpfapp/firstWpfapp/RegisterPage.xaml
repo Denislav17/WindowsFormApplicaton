@@ -12,8 +12,11 @@
             <RowDefinition Height="49*"/>
         </Grid.RowDefinitions>
         <Grid HorizontalAlignment="Left" Height="647" Margin="93,71,0,-185" VerticalAlignment="Top" Width="523" Grid.RowSpan="2">
-            <!-- Top Image -->
+            <!-- Images -->
             <Image HorizontalAlignment="Left" Height="179" Margin="111,-40,0,0" VerticalAlignment="Top" Width="349" Source="C:\Users\my\Desktop\seesharplogo4.png"/>
+            <Button x:Name="btnSupport" HorizontalAlignment="Left" Margin="24,522,0,0" VerticalAlignment="Top" Width="36" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="35" Click="btnSupport_Click">
+                <Image Source="C:\Users\my\Desktop\help.png" Height="32" Width="37"/>
+            </Button>
             <!-- First Name -->
             <Label x:Name="lblDisplayFirstName" Content="First Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="122,161,0,0" VerticalAlignment="Top" Width="97" Height="36" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
             <TextBox x:Name="txtDisplayFirstName" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="224,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White" />
@@ -38,6 +41,7 @@
             <!-- Buttons -->
             <Button x:Name="btnReg" Content="Register" HorizontalAlignment="Left" Margin="65,522,0,0" VerticalAlignment="Top" Width="194" Height="35" FontFamily="Lato Light" FontSize="16" Background="#218380" Foreground="White" Click="btnReg_Click"/>
             <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="264,522,0,0" VerticalAlignment="Top" Width="196" Height="35" RenderTransformOrigin="0,-0.4"  FontFamily="Lato Light" FontSize="16" Background="#218380" Foreground="White" Click="btnExit_Click"/>
+
         </Grid>
 
     </Grid>
