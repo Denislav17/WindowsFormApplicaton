@@ -5,19 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:firstWpfapp"
         mc:Ignorable="d"
-        Title="Register Page" Height="590.202" Width="676.857" Background="#8F2D56" MinWidth="699.857" MinHeight="489.202" WindowStyle="ThreeDBorderWindow" Visibility="Visible" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
-    <Grid>
-        <Grid HorizontalAlignment="Left" Height="455" Margin="93,71,0,0" VerticalAlignment="Top" Width="523">
-            <Label x:Name="lblName" Content="Username" HorizontalAlignment="Left" Margin="113,181,0,0" VerticalAlignment="Top" Width="87" Height="36" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="lblPassword"   Content="Password" HorizontalAlignment="Left" Margin="113,240,0,0" VerticalAlignment="Top" Width="87" Height="35" RenderTransformOrigin="0.701,0.429" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
-            <Label x:Name="lblConfirmPass"   Content="Confirm Password" HorizontalAlignment="Left" Margin="56,301,0,0" VerticalAlignment="Top" Height="33" Width="144" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="txtName" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="224,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White" />
-            <PasswordBox x:Name="txtPassword" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="224,240,0,0"  VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White"/>
-            <PasswordBox x:Name="txtConfirmPassword" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="224,301,0,0"  VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White"/>
+        Title="Register Page" Height="748.202" Width="676.857" Background="#8F2D56" MinWidth="699.857" MinHeight="489.202" WindowStyle="ThreeDBorderWindow" Visibility="Visible" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid Height="719" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="484*"/>
+            <RowDefinition Height="49*"/>
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Left" Height="647" Margin="93,71,0,-185" VerticalAlignment="Top" Width="523" Grid.RowSpan="2">
+            <!-- Top Image -->
             <Image HorizontalAlignment="Left" Height="179" Margin="111,-40,0,0" VerticalAlignment="Top" Width="349" Source="C:\Users\my\Desktop\seesharplogo4.png"/>
-            <Button x:Name="btnReg" Content="Register" HorizontalAlignment="Left" Margin="56,351,0,0" VerticalAlignment="Top" Width="404" Height="35" FontFamily="Lato Light" FontSize="16" Background="#218380" Foreground="White" Click="btnReg_Click"/>
-            <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="56,391,0,0" VerticalAlignment="Top" Width="404" Height="35" RenderTransformOrigin="0,-0.4"  FontFamily="Lato Light" FontSize="16" Background="#218380" Foreground="White" Click="btnExit_Click"/>
+            <!-- First Name -->
+            <Label x:Name="lblDisplayFirstName" Content="First Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="122,161,0,0" VerticalAlignment="Top" Width="97" Height="36" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="txtDisplayFirstName" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="224,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White" />
+            <!-- Last Name -->
+            <Label x:Name="lblDisplayLastName" Content="Last Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="122,207,0,0" VerticalAlignment="Top" Width="97" Height="36" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="txtDisplayLastName" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="224,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White" />
+            <!-- Company Name -->
+            <Label x:Name="lblCompanyName" Content="Company Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="96,248,0,0" VerticalAlignment="Top" Width="123" Height="36" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="txtCompanyName" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="224,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White" />
+            <!-- Position -->
+            <Label x:Name="lblPosition" Content="Position" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="122,289,0,0" VerticalAlignment="Top" Width="97" Height="36" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="txtPosition" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="224,289,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White" />
+            <!-- Username -->
+            <Label x:Name="lblName" Content="Username" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="122,379,0,0" VerticalAlignment="Top" Width="89" Height="36" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="txtName" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="224,372,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White" />
+            <!-- Password -->
+            <Label x:Name="lblPassword"   Content="Password" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="122,415,0,0" VerticalAlignment="Top" Width="87" Height="35" RenderTransformOrigin="0.701,0.429" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <PasswordBox x:Name="txtPassword" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="224,415,0,0"  VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White"/>
+            <!-- Confirm Password -->
+            <Label x:Name="lblConfirmPass"   Content="Confirm Password" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="65,455,0,0" VerticalAlignment="Top" Height="33" Width="144" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <PasswordBox x:Name="txtConfirmPassword" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="224,457,0,0"  VerticalAlignment="Top" Width="236" Background="#218380" Foreground="White"/>
+            <!-- Buttons -->
+            <Button x:Name="btnReg" Content="Register" HorizontalAlignment="Left" Margin="65,522,0,0" VerticalAlignment="Top" Width="194" Height="35" FontFamily="Lato Light" FontSize="16" Background="#218380" Foreground="White" Click="btnReg_Click"/>
+            <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="264,522,0,0" VerticalAlignment="Top" Width="196" Height="35" RenderTransformOrigin="0,-0.4"  FontFamily="Lato Light" FontSize="16" Background="#218380" Foreground="White" Click="btnExit_Click"/>
         </Grid>
-        
+
     </Grid>
 </Window>

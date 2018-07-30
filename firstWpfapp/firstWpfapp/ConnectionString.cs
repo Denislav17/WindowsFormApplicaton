@@ -65,13 +65,18 @@ namespace firstWpfapp
             return users;
         }
 
-        public void regUser(String username, String password, DateTime regDate)
+        public void regUser(String firstName, String lastName, String username, String password, String company, String position, DateTime regDate)
         {           
             SqlCommand command;
             SqlDataAdapter adapter = new SqlDataAdapter();
             String sql;
 
-            sql = "Insert into UserData (ID,username,password,regDate) values("+ usersCount + ",'" + username + "','" + password + "','" + regDate + "')";
+            sql = "Insert into UserData (ID,firstName,lastName,username,password,companyName,position,regDate) " +
+                "values("+ usersCount + ",'" 
+                + firstName + "','" + lastName + "','"
+                + username + "','" + password + "','"
+                + company  + "','" + position + "','"
+                + regDate + "')";
 
             command = new SqlCommand(sql, cnn);
 

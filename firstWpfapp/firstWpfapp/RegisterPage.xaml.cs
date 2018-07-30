@@ -35,13 +35,16 @@ namespace firstWpfapp
 
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
-            String username;
-            String password;
+            String username = txtName.Text;
+            String password = txtPassword.Password;
+            String firstName = txtDisplayFirstName.Text;
+            String lastName = txtDisplayLastName.Text;
+            String company = txtCompanyName.Text;
+            String position = txtPosition.Text;
 
-            username = txtName.Text;
-            password = txtPassword.Password;
+
             DateTime regDate = DateTime.Now;
-            cs.regUser(username, password, regDate);
+            cs.regUser(firstName,lastName,username, password,company,position, regDate);
             MessageBox.Show("Successfully registered!");
             this.Close();
 
