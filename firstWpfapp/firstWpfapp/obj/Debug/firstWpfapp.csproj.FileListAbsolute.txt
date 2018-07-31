@@ -1,6 +1,7 @@
 C:\Users\my\source\repos\firstWpfapp\firstWpfapp\bin\Debug\firstWpfapp.exe.config
 C:\Users\my\source\repos\firstWpfapp\firstWpfapp\bin\Debug\firstWpfapp.exe
 C:\Users\my\source\repos\firstWpfapp\firstWpfapp\bin\Debug\firstWpfapp.pdb
+C:\Users\my\source\repos\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.csprojAssemblyReference.cache
 C:\Users\my\source\repos\firstWpfapp\firstWpfapp\obj\Debug\ContactsBasket.g.cs
 C:\Users\my\source\repos\firstWpfapp\firstWpfapp\obj\Debug\ControlPanel.g.cs
 C:\Users\my\source\repos\firstWpfapp\firstWpfapp\obj\Debug\LoginPage.g.cs

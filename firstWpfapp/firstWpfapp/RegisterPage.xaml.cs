@@ -24,6 +24,7 @@ namespace firstWpfapp
         private ConnectionString cs = new ConnectionString();
         public RegisterPage()
         {
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
             cs.getUsers();
         }

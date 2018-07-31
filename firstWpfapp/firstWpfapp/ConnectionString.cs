@@ -72,7 +72,7 @@ namespace firstWpfapp
             SqlDataReader userDataReader;
             String sql;
 
-            sql = "Select firstName,lastName,companyName,position from UserData";
+            sql = "Select ID,firstName,lastName,companyName,position from UserData order by ID";
             command = new SqlCommand(sql, cnn);
 
             userDataReader = command.ExecuteReader();
@@ -80,10 +80,11 @@ namespace firstWpfapp
             while(userDataReader.Read())
             {
                 Users user = new Users();
-                user.setFirstName(userDataReader.GetValue(0).ToString());
-                user.setLastName(userDataReader.GetValue(1).ToString());
-                user.setCompany(userDataReader.GetValue(2).ToString());
-                user.setPosition(userDataReader.GetValue(3).ToString());
+                user.setId(Convert.ToInt32(userDataReader.GetValue(0)));
+                user.setFirstName(userDataReader.GetValue(1).ToString());
+                user.setLastName(userDataReader.GetValue(2).ToString());
+                user.setCompany(userDataReader.GetValue(3).ToString());
+                user.setPosition(userDataReader.GetValue(4).ToString());
 
                 users.Add(user);
                 

@@ -21,26 +21,30 @@ namespace firstWpfapp
     {
 
         private ConnectionString cs = new ConnectionString();
+        private List<Users> _listOfUsers = new List<Users>();
         public ContactsBasket()
         {
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
+            _listOfUsers = cs.getUserData();
             fillListOfUsers();
         }
 
         private void fillListOfUsers()
         {
-            String fname;
-            String lname;
-            List<Users> listOfUsers = new List<Users>();
-            listOfUsers = cs.getUserData();
-            
-            foreach (Users user in listOfUsers)
+            foreach (Users user in _listOfUsers)
             {
-                fname = user.getFirstName();
-                lname = user.getLastName();
-                usersList.Items.Add(fname + " " + lname);
+               usersList.Items.Add(user.toString());
             }
             
+        }
+
+        private void usersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            txtFirstName.Text = _listOfUsers[usersList.SelectedIndex].getFirstName();
+            txtLastName.Text = _listOfUsers[usersList.SelectedIndex].getLastName();
+            txtCompany.Text = _listOfUsers[usersList.SelectedIndex].getCompany();
+            txtPosition.Text = _listOfUsers[usersList.SelectedIndex].getPosition();
         }
     }
 }

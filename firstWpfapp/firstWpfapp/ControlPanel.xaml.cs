@@ -21,12 +21,15 @@ namespace firstWpfapp
     {
         public ControlPanel()
         {
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
             
         }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow loginPage = new MainWindow();
+            loginPage.Show();
             this.Close();
         }
 

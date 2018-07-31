@@ -5,13 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:firstWpfapp"
         mc:Ignorable="d"
-        Title="Control Panel" Height="590.202" Width="676.857" Background="#8F2D56" MinWidth="699.857" MinHeight="489.202" WindowStyle="ThreeDBorderWindow" Visibility="Visible" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
-    <Grid Background="#8F2D56">
+        Title="Control Panel" Height="590.202" Width="676.857"  MinWidth="699.857" MinHeight="489.202" WindowStyle="ThreeDBorderWindow" Visibility="Visible" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid >
         <Grid HorizontalAlignment="Left" Height="561" VerticalAlignment="Top" Width="694">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="565*"/>
                 <ColumnDefinition Width="129*"/>
             </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF8F2D56" Offset="0.379"/>
+                    <GradientStop Color="White" Offset="1.2"/>
+                </RadialGradientBrush>
+            </Grid.Background>
             <Separator HorizontalAlignment="Left" Height="100" Margin="64,233,0,0" VerticalAlignment="Top" Width="558" RenderTransformOrigin="0.5,0.5" Background="White" Grid.ColumnSpan="2">
                 <Separator.RenderTransform>
                     <TransformGroup>
@@ -24,7 +30,7 @@
             </Separator>
             <Separator HorizontalAlignment="Left" Height="100" Margin="0,232,0,0" VerticalAlignment="Top" Width="694" RenderTransformOrigin="-0.537,0.196" Background="White" Grid.ColumnSpan="2"/>
             <!-- Add Contact Button -->
-            <Button x:Name="btnAddContact"  HorizontalAlignment="Left" Margin="106,59,0,0" VerticalAlignment="Top" Width="133" Height="133" Background="#8F2D56" Foreground="White" FontFamily="Tahoma" FontSize="24" Click="btnAddContact_Click" BorderBrush="#8F2D56">
+            <Button x:Name="btnAddContact"  HorizontalAlignment="Left" Margin="106,59,0,0" VerticalAlignment="Top" Width="133" Height="133" Background="Transparent" Foreground="White" FontFamily="Tahoma" FontSize="24" Click="btnAddContact_Click" BorderBrush="Transparent">
                 <Image Source="C:\Users\my\Desktop\plus.png" />
             </Button>
             <Label x:Name="lblAdd" HorizontalContentAlignment="Center" Content="Add Contact" HorizontalAlignment="Left" Margin="106,204,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="22" Width="133" Foreground="White"/>

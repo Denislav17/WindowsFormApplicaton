@@ -13,7 +13,7 @@ namespace firstWpfapp
         {
 
         }
-
+        private int _id;
         private String _firstName;
         private String _lastName;
         private String _userName;
@@ -21,6 +21,16 @@ namespace firstWpfapp
         private String _company;
         private String _position;
         private DateTime _regDate;
+        
+        public void setId(int id)
+        {
+            _id = id;
+        }
+
+        public int getId()
+        {
+            return _id;
+        }
 
         public void setUsername(string username)
         {
@@ -90,6 +100,11 @@ namespace firstWpfapp
         public DateTime getRegDate()
         {
             return _regDate;
+        }
+
+        public String toString()
+        {
+            return _firstName + " " + _lastName;
         }
 
 

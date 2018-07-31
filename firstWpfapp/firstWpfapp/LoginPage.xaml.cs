@@ -25,6 +25,7 @@ namespace firstWpfapp
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             lbl.Content = "Connection to the server established!";
 
         }
@@ -44,7 +45,6 @@ namespace firstWpfapp
                     ControlPanel cp = new ControlPanel();
                     this.Close();
                     cp.Show();
-                    MessageBox.Show("Welcome to your control panel!");
                 } 
                 else
                 {
