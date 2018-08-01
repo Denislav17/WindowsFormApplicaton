@@ -13,16 +13,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace firstWpfapp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginPage : Window 
     {
-        private ConnectionString cs = new ConnectionString();
-        public MainWindow()
+        private ConnectionString _cs = new ConnectionString();
+        private List<Users> _users = new List<Users>();
+
+        public LoginPage()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
@@ -33,12 +36,12 @@ namespace firstWpfapp
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
 
-            List<Users> users = cs.getUsers();
+            _cs.getUsers(_users);
 
             var username = txtName.Text;
             var password = txtPassword.Password;
 
-            foreach(Users user in users)
+            foreach(Users user in _users)
             {
                 if (username.Equals(user.getUsername()) && password.Equals(user.getPassword()) )
                 {
@@ -51,10 +54,6 @@ namespace firstWpfapp
                     lbl.Content = " Credentials incorrect! Please verify.";
                 }
             }
-
-
-
-
         }
 
         private void btnReg_Click(object sender, RoutedEventArgs e)

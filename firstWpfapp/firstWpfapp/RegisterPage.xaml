@@ -20,9 +20,7 @@
         <Grid HorizontalAlignment="Left" Height="647" Margin="93,71,0,-185" VerticalAlignment="Top" Width="523" Grid.RowSpan="2">
             <!-- Images -->
             <Image HorizontalAlignment="Left" Height="179" Margin="111,-40,0,0" VerticalAlignment="Top" Width="349" Source="C:\Users\my\Desktop\seesharplogo4.png"/>
-            <Button x:Name="btnSupport" HorizontalAlignment="Left" Margin="24,522,0,0" VerticalAlignment="Top" Width="36" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="35" Click="btnSupport_Click">
-                <Image Source="C:\Users\my\Desktop\help.png" Height="32" Width="37" />
-            </Button>
+            <Button x:Name="btnSupport" HorizontalAlignment="Left" Margin="24,522,0,0" VerticalAlignment="Top" Width="36" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="35" Click="btnSupport_Click"/>
             <!-- First Name -->
             <Label x:Name="lblDisplayFirstName" Content="First Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="122,161,0,0" VerticalAlignment="Top" Width="97" Height="36" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
             <TextBox BorderBrush="White" BorderThickness="2" x:Name="txtDisplayFirstName" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="36" Margin="224,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="236" Background="Transparent" Foreground="White" />

@@ -29,7 +29,7 @@ namespace firstWpfapp
             _user = user;
             this.Title = "Add Contact to: " + user.getFirstName() + " " + user.getLastName() + "'s contact basket";
 
-            _listOfUsers = cs.getExistingUsersData();
+            cs.getExistingUsersData(_listOfUsers);
             fillListOfUsers();
         }
 

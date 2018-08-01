@@ -12,28 +12,27 @@ namespace firstWpfapp
 {
     class ConnectionString : IDisposable
     {
-        private SqlConnection cnn;
-        private int usersCount = 0;
+        private SqlConnection _DBConnection;
+        private int usersTotalNumber = 0;
         public ConnectionString()
-        {
-            string connectionString;
-
-            connectionString = @"Data Source=.;
+        { 
+            string connectionString = @"Data Source=.;
                                Initial Catalog=ContactRegistry_1_0;
                                Integrated Security=True;";
-            cnn = new SqlConnection(connectionString);
-            cnn.Open();
+            _DBConnection = new SqlConnection(connectionString);
+            _DBConnection.Open();
+
+            getTotalNumberOfUsers();
         }
 
-        public List<Users> getUsers()
+        public List<Users> getUsers(List<Users> users)
         {
-            List<Users> users = new List<Users>();
             SqlCommand command;
             SqlDataReader userDataReader;
             String sql;
 
             sql = "Select username,password from UserData";
-            command = new SqlCommand(sql, cnn);
+            command = new SqlCommand(sql, _DBConnection);
 
             userDataReader = command.ExecuteReader();
 
@@ -44,23 +43,21 @@ namespace firstWpfapp
                 user.setPassword(userDataReader.GetValue(1).ToString());
 
                 users.Add(user);
-                usersCount++;
             }
 
             userDataReader.Close();
             return users;
         }
 
-        public List<Users> getExistingUsersData()
+        public List<Users> getExistingUsersData(List<Users> users)
         {
-            List<Users> users = new List<Users>();
             SqlCommand command;
             SqlDataReader userDataReader;
             String sql;
 
             sql = "Select ID, firstName, lastName, companyName, position, cardNumber from UserData order by ID";
 
-            command = new SqlCommand(sql, cnn);
+            command = new SqlCommand(sql, _DBConnection);
 
             userDataReader = command.ExecuteReader();
 
@@ -91,7 +88,7 @@ namespace firstWpfapp
             String sql;
 
             sql = "Select contactId,firstName,lastName,companyName,position,cardNumber from " + contextUser.getUsername() + "_ContactBasket order by contactId";
-            command = new SqlCommand(sql, cnn);
+            command = new SqlCommand(sql, _DBConnection);
 
             userDataReader = command.ExecuteReader();
 
@@ -115,39 +112,41 @@ namespace firstWpfapp
 
         public void regUser(Users user)
         {           
-            SqlCommand command;
-            SqlCommand commannd1;
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            String sql;
-            String sql1;
+            SqlDataAdapter userAdapter = new SqlDataAdapter();
 
             //To implement cardNumber class which will generate random card nubmer
             //edit SQL statement so that it injects card number in the DB.
-            
 
-            sql = "Insert into UserData (ID,firstName,lastName,username,password,companyName,position,regDate) " +
-                "values("+ usersCount + ",'" 
+            //Register user into UserData Table
+            String insertionQuery = "Insert into UserData (ID,firstName,lastName,username,password,companyName,position,regDate) " +
+                "values("+ usersTotalNumber + ",'" 
                 + user.getFirstName() + "','" + user.getLastName() + "','"
                 + user.getUsername() + "','" + user.getPassword() + "','"
                 + user.getCompany()  + "','" + user.getPosition() + "','"
                 + user.getRegDate() + "')";
 
-            command = new SqlCommand(sql, cnn);
+            SqlCommand insertUserDataCommand = new SqlCommand(insertionQuery, _DBConnection);
+            userAdapter.InsertCommand = new SqlCommand(insertionQuery, _DBConnection);
+            userAdapter.InsertCommand.ExecuteNonQuery();
+            insertUserDataCommand.Dispose();
+            //End of User Registration Query
 
-            adapter.InsertCommand = new SqlCommand(sql, cnn);
+            //Register Contact basket for the same user
+            regUserContactBasket(user, userAdapter);
+
+            //Close connection
+            _DBConnection.Close();
+        }
+
+        private void regUserContactBasket(Users user, SqlDataAdapter adapter)
+        {
+            String createTableQuery = "CREATE TABLE " + user.getUsername() + "_ContactBasket (contactId varchar(50), firstName varchar(50), lastName varchar(50), companyName varchar(50), position varchar(50), cardNumber varchar(50))";
+            SqlCommand createContactBasketCommand = new SqlCommand(createTableQuery, _DBConnection);
+
+            adapter.InsertCommand = new SqlCommand(createTableQuery, _DBConnection);
             adapter.InsertCommand.ExecuteNonQuery();
 
-            command.Dispose();
-
-            sql1 = "CREATE TABLE " + user.getUsername() + "_ContactBasket (contactId varchar(50), firstName varchar(50), lastName varchar(50), companyName varchar(50), position varchar(50), cardNumber varchar(50))";
-            commannd1 = new SqlCommand(sql1, cnn);
-
-            adapter.InsertCommand = new SqlCommand(sql1, cnn);
-            adapter.InsertCommand.ExecuteNonQuery();
-
-            commannd1.Dispose();
-
-            cnn.Close();
+            createContactBasketCommand.Dispose();
         }
 
         public void addToUserContactBasket(Users userBasketOwner, Users userBasketFeeder)
@@ -162,17 +161,34 @@ namespace firstWpfapp
                 + userBasketFeeder.getFirstName() + "','" + userBasketFeeder.getLastName() + "','"
                 + userBasketFeeder.getCompany() + "','" + userBasketFeeder.getPosition() + "','"
                 + userBasketFeeder.getCardNumber() + "')";
-            command = new SqlCommand(sql, cnn);
+            command = new SqlCommand(sql, _DBConnection);
 
-            adapter.InsertCommand = new SqlCommand(sql, cnn);
+            adapter.InsertCommand = new SqlCommand(sql, _DBConnection);
             adapter.InsertCommand.ExecuteNonQuery();
 
             command.Dispose();
 
-            cnn.Close();
+            _DBConnection.Close();
 
         }
 
+        private void getTotalNumberOfUsers()
+        {
+            SqlCommand totalNumberOfUsersCommand;
+            SqlDataReader userNumberReader;
+            String totalAmountQuery;
+
+            totalAmountQuery = "select ID from UserData";
+
+            totalNumberOfUsersCommand = new SqlCommand(totalAmountQuery, _DBConnection);
+
+            userNumberReader = totalNumberOfUsersCommand.ExecuteReader();
+
+            while (userNumberReader.Read()) {
+                usersTotalNumber++;
+            }
+            userNumberReader.Close();
+        }
 
         public void Dispose()
         {

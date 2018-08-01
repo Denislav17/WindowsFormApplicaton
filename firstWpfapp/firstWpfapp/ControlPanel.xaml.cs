@@ -31,7 +31,7 @@ namespace firstWpfapp
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow loginPage = new MainWindow();
+            LoginPage loginPage = new LoginPage();
             loginPage.Show();
             this.Close();
         }
