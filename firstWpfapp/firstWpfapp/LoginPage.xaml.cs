@@ -42,7 +42,7 @@ namespace firstWpfapp
             {
                 if (username.Equals(user.getUsername()) && password.Equals(user.getPassword()) )
                 {
-                    ControlPanel cp = new ControlPanel();
+                    ControlPanel cp = new ControlPanel(user);
                     this.Close();
                     cp.Show();
                 } 

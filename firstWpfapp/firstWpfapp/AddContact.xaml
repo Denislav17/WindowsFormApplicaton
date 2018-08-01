@@ -1,0 +1,35 @@
+﻿<Window x:Class="firstWpfapp.AddContact"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:firstWpfapp"
+        mc:Ignorable="d"
+        Title="AddContact" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Pink" Offset="0"/>
+            <GradientStop Color="#FF000940" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="344" Margin="121,42,0,0" VerticalAlignment="Top" Width="544" >
+            <ComboBox x:Name="existingUsersList" HorizontalAlignment="Left" Margin="74,44,0,0" VerticalAlignment="Top" Width="387" Height="28" SelectionChanged="existingUsersList_SelectionChanged"/>
+            <Label Content="Select an existing contact by Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="74,10,0,0" VerticalAlignment="Top" Width="387" FontSize="16" FontFamily="Lato Light" FontWeight="Bold" Foreground="White" Background="Transparent"/>
+            <TextBox HorizontalContentAlignment="Center" BorderBrush="White" BorderThickness="1" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White" x:Name="txtFirstName"  HorizontalAlignment="Left" Height="23" Margin="74,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="176"/>
+            <TextBox HorizontalContentAlignment="Center" BorderBrush="White" BorderThickness="1" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"  x:Name="txtLastName"  HorizontalAlignment="Left" Height="23" Margin="287,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="174"/>
+            <TextBox HorizontalContentAlignment="Center" BorderBrush="White" BorderThickness="1" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"  x:Name="txtCompany"  HorizontalAlignment="Left" Height="23" Margin="74,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="176"/>
+            <TextBox HorizontalContentAlignment="Center" BorderBrush="White" BorderThickness="1" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"  x:Name="txtPosition" HorizontalAlignment="Left" Height="23" Margin="285,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="176"/>
+            <TextBox HorizontalContentAlignment="Center" BorderBrush="White" BorderThickness="1" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"  x:Name="txtCardNumber"  HorizontalAlignment="Left" Height="23" Margin="184,261,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="176"/>
+            <Button HorizontalContentAlignment="Center"  BorderBrush="White" BorderThickness="1" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"  x:Name="btnAddToContactBasket" Content="Add to Contact Basket" HorizontalAlignment="Left" Margin="184,319,0,-12" VerticalAlignment="Top" Width="176" Height="37" Click="btnAddToContactBasket_Click"/>
+        </Grid>
+        <Label x:Name="lblFirstName" Content="First Name" FontSize="16" FontFamily="Lato Light" FontWeight="Bold" Foreground="White" Background="Transparent" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="241,131,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.447,-0.077"/>
+        <Label x:Name="lblLastName"  Content="Last Name" FontSize="16" FontFamily="Lato Light" FontWeight="Bold" Foreground="White" Background="Transparent" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="449,131,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.026,0.346"/>
+        <Label x:Name="lblCompanyName"  Content="Company" FontSize="16" FontFamily="Lato Light" FontWeight="Bold" Foreground="White" Background="Transparent" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="241,203,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label x:Name="lblCompanyPosition"  Content="Position" FontSize="16" FontFamily="Lato Light" FontWeight="Bold" Foreground="White" Background="Transparent" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="449,203,0,0" VerticalAlignment="Top" Width="82"/>
+        <Label x:Name="lblBusinessCardNumber"  Content="Business Card Number" FontSize="16" FontFamily="Lato Light" FontWeight="Bold" Foreground="White" Background="Transparent" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="306,267,0,0" VerticalAlignment="Top" Width="173"/>
+        <Button x:Name="btnGoBack" HorizontalAlignment="Left" VerticalAlignment="Top" Width="77" Margin="10,371,0,0" Background="Transparent" BorderBrush="Transparent" Height="38" Click="btnBack_Click">
+            <Image Source="C:\Users\my\Desktop\btnBack.png" />
+        </Button>
+    </Grid>
+</Window>

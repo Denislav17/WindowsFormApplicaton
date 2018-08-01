@@ -19,10 +19,13 @@ namespace firstWpfapp
     /// </summary>
     public partial class ControlPanel : Window
     {
-        public ControlPanel()
+        private Users _user;
+        public ControlPanel(Users user)
         {
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
+            this.Title = "Control Panel of : " + user.getUsername();
+            _user = user;
             
         }
 
@@ -35,12 +38,15 @@ namespace firstWpfapp
 
         private void btnAddContact_Click(object sender, RoutedEventArgs e)
         {
-            //to implement open form to add contact
+            AddContact ac = new AddContact(_user);
+            ac.Show();
+            this.Close();
+            
         }
 
         private void btnViewContacts_Click(object sender, RoutedEventArgs e)
         {
-            ContactsBasket cb = new ContactsBasket();
+            ContactsBasket cb = new ContactsBasket(_user);
         }
 
         private void btnCalendar_Click(object sender, RoutedEventArgs e)
@@ -53,9 +59,11 @@ namespace firstWpfapp
             //to implement open form window with calendar
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            //to implement open form window with calendar
+            ControlPanel cp = new ControlPanel(_user);
+            cp.Show();
+            this.Close();
         }
 
     }

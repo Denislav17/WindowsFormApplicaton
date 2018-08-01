@@ -22,12 +22,17 @@ namespace firstWpfapp
 
         private ConnectionString cs = new ConnectionString();
         private List<Users> _listOfUsers = new List<Users>();
-        public ContactsBasket()
+        private Users _user;
+        public ContactsBasket(Users user)
         {
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
-            _listOfUsers = cs.getUserData();
+            this.Title = "Contact Basket of : " + user.getUsername();
+            _user = user;
+
+            _listOfUsers = cs.getAddedContactsData(user);
             fillListOfUsers();
+            
         }
 
         private void fillListOfUsers()
@@ -45,6 +50,13 @@ namespace firstWpfapp
             txtLastName.Text = _listOfUsers[usersList.SelectedIndex].getLastName();
             txtCompany.Text = _listOfUsers[usersList.SelectedIndex].getCompany();
             txtPosition.Text = _listOfUsers[usersList.SelectedIndex].getPosition();
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            ControlPanel cp = new ControlPanel(_user);
+            cp.Show();
+            this.Close();
         }
     }
 }

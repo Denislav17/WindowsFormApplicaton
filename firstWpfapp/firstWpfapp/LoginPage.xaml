@@ -13,15 +13,15 @@
         </RadialGradientBrush>
     </Window.Background>
     <Grid HorizontalAlignment="Left" Height="379" Margin="33,156,0,0" VerticalAlignment="Top" Width="632">
-        <Button BorderBrush="White" BorderThickness="2.5"   x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="142,179,0,0" VerticalAlignment="Top" Width="172" Height="49" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White" Click="btnLogin_Click"/>
-        <Button BorderBrush="White" BorderThickness="2.5"  x:Name="btnReg" Content="Register" HorizontalAlignment="Left" Margin="322,179,0,0" VerticalAlignment="Top" Width="169" Height="49" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White" Click="btnReg_Click"/>
-        <Button BorderBrush="White" BorderThickness="2.5"  x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="142,233,0,0" VerticalAlignment="Top" Width="349" RenderTransformOrigin="0,-0.4" Height="28" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White" Click="btnExit_Click"/>
-        <Label x:Name="lblName" Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="142,59,0,0" Foreground="White" Height="32" Width="90" FontSize="18"/>
-        <Label x:Name="lblPass" Content="Password" HorizontalAlignment="Left" Margin="142,124,0,0" VerticalAlignment="Top" Foreground="White" Height="32" Width="90" RenderTransformOrigin="1.134,1.125" FontSize="18"/>
-        <TextBox x:Name="txtName" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Height="32" Margin="241,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Foreground="Black"/>
+        <Button BorderBrush="White" BorderThickness="2.5"   x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="142,216,0,0" VerticalAlignment="Top" Width="172" Height="49" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White" Click="btnLogin_Click"/>
+        <Button BorderBrush="White" BorderThickness="2.5"  x:Name="btnReg" Content="Register" HorizontalAlignment="Left" Margin="322,216,0,0" VerticalAlignment="Top" Width="169" Height="49" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White" Click="btnReg_Click"/>
+        <Button BorderBrush="White" BorderThickness="2.5"  x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="142,270,0,0" VerticalAlignment="Top" Width="349" RenderTransformOrigin="0,-0.4" Height="28" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White" Click="btnExit_Click"/>
+        <Label x:Name="lblName" Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="142,96,0,0" Foreground="White" Height="32" Width="90" FontSize="18"/>
+        <Label x:Name="lblPass" Content="Password" HorizontalAlignment="Left" Margin="142,161,0,0" VerticalAlignment="Top" Foreground="White" Height="32" Width="90" RenderTransformOrigin="1.134,1.125" FontSize="18"/>
+        <TextBox x:Name="txtName" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Height="32" Margin="241,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Foreground="Black"/>
         <Label x:Name="lbl" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="142,290,0,0" FontSize="16" FontFamily="Lato Light" FontWeight="Bold" Foreground="White" Background="Transparent" RenderTransformOrigin="-0.214,1" Width="349" HorizontalContentAlignment="Center" />
-        <PasswordBox x:Name="txtPassword" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Height="32" Margin="241,124,0,0"  VerticalAlignment="Top" Width="250" Foreground="Black"/>
-        <Image HorizontalAlignment="Left" Height="179" Margin="142,-141,0,0" VerticalAlignment="Top" Width="349" Source="C:\Users\my\Desktop\seesharplogo4.png"/>
+        <PasswordBox x:Name="txtPassword" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Height="32" Margin="241,161,0,0"  VerticalAlignment="Top" Width="250" Foreground="Black"/>
+        <Image HorizontalAlignment="Left" Height="179" Margin="142,-111,0,0" VerticalAlignment="Top" Width="349" Source="C:\Users\my\Desktop\seesharplogo4.png"/>
 
     </Grid>
 </Window>

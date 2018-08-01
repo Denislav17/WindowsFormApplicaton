@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace firstWpfapp
 {
-    class Users
+    public class Users
     {
 
         public Users()
@@ -21,6 +21,7 @@ namespace firstWpfapp
         private String _company;
         private String _position;
         private DateTime _regDate;
+        private String _cardNumber;
         
         public void setId(int id)
         {
@@ -95,6 +96,16 @@ namespace firstWpfapp
         public void setRegDate(DateTime regDate)
         {
             _regDate = regDate;
+        }
+
+        public void setCardNumber(string cardNumber)
+        {
+            _cardNumber = cardNumber;
+        }
+
+        public String getCardNumber()
+        {
+            return _cardNumber;
         }
 
         public DateTime getRegDate()

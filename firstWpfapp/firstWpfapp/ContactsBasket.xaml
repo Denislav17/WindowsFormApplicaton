@@ -31,5 +31,8 @@
             <ComboBox x:Name="usersList"  HorizontalAlignment="Left" Margin="98,117,0,0" VerticalAlignment="Top" Width="247" Height="24" SelectionChanged="usersList_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxDropDownHeight="190" />
             <Label x:Name="lblSelectUser" Content="Select a contact" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="130,60,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="24" Foreground="White" Height="41" Width="180" />
         </Grid>
+        <Button x:Name="btnGoBack" HorizontalAlignment="Left" VerticalAlignment="Top" Width="77" Margin="20,402,0,0" Background="Transparent" BorderBrush="Transparent" Height="38" Click="btnBack_Click">
+            <Image Source="C:\Users\my\Desktop\btnBack.png" />
+        </Button>
     </Grid>
 </Window>
