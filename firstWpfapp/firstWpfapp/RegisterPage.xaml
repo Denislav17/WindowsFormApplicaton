@@ -13,8 +13,8 @@
         </Grid.RowDefinitions>
         <Grid.Background>
             <RadialGradientBrush>
-                <GradientStop Color="#FF8F2D56" Offset="0.379"/>
-                <GradientStop Color="White" Offset="1.2"/>
+                <GradientStop Color="Pink" Offset="0"/>
+                <GradientStop Color="#FF000940" Offset="1"/>
             </RadialGradientBrush>
         </Grid.Background>
         <Grid HorizontalAlignment="Left" Height="647" Margin="93,71,0,-185" VerticalAlignment="Top" Width="523" Grid.RowSpan="2">

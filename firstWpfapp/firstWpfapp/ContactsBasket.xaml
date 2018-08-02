@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:firstWpfapp"
         mc:Ignorable="d"
-        Title="Contacts Basket" Height="403.773" Width="673.857" Background="#8F2D56" MinWidth="699.857" MinHeight="489.202" WindowStyle="ThreeDBorderWindow" Visibility="Visible" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+        Title="Contacts Basket" Height="403.773" Width="673.857" Background="#FF000940" MinWidth="699.857" MinHeight="489.202" WindowStyle="ThreeDBorderWindow" Visibility="Visible" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
 
     <Grid Margin="0,0,17,10">
         <Grid x:Name="grid"  HorizontalAlignment="Left" Height="440" Margin="10,10,0,0" VerticalAlignment="Top" Width="667">
             <Grid.Background>
                 <RadialGradientBrush>
-                    <GradientStop Color="#FF8F2D56" Offset="0.379"/>
-                    <GradientStop Color="White" Offset="1.2"/>
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="#FF000940" Offset="1"/>
                 </RadialGradientBrush>
             </Grid.Background>
             <Grid HorizontalAlignment="Left" Height="371" Margin="425,32,0,0" VerticalAlignment="Top" Width="217">

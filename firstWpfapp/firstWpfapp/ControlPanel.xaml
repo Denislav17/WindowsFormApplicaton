@@ -14,8 +14,8 @@
             </Grid.ColumnDefinitions>
             <Grid.Background>
                 <RadialGradientBrush>
-                    <GradientStop Color="#FF8F2D56" Offset="0.379"/>
-                    <GradientStop Color="White" Offset="1.2"/>
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="#FF000940" Offset="1"/>
                 </RadialGradientBrush>
             </Grid.Background>
             <Separator HorizontalAlignment="Left" Height="100" Margin="64,233,0,0" VerticalAlignment="Top" Width="558" RenderTransformOrigin="0.5,0.5" Background="White" Grid.ColumnSpan="2">
