@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Diagnostics;
+using System.ComponentModel;
 
 namespace firstWpfapp
 {
@@ -28,7 +30,7 @@ namespace firstWpfapp
         {
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
-            
+
         }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
@@ -53,6 +55,78 @@ namespace firstWpfapp
 
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
+            //creating a user & populating data 
+            Users user = new Users();
+            populateUserData(user);
+            //flag to check if username already exists
+            Boolean isRegistered = false;
+
+
+            //List of existing usernames
+            List<String> existingUsernames = new List<String>();
+            getExistingUsers(existingUsernames);
+
+            //Iterrating over the existing usernames -- > flag update
+            foreach(string existingUsername in existingUsernames)
+            {
+                if (user.getUsername().Equals(existingUsername))
+                    isRegistered = true; 
+                else 
+                    isRegistered = false;
+                
+            }
+
+            if (isRegistered.Equals(true)) {
+                MessageBox.Show("User with same username found: " + user.getUsername());
+            }
+
+
+
+            if (txtName.Text.Length <= 2 || String.IsNullOrWhiteSpace(txtName.Text))
+            {
+                lbl.Content = "Username must contain more than 2 characters!";
+                txtName.Focus();
+            }
+            else if (txtPassword.Password.Length <= 2 || String.IsNullOrWhiteSpace(txtPassword.Password))
+            {
+                lbl.Content = "Password must be greater than 2 symbols!";
+                txtPassword.Focus();
+            }
+            else if (!txtConfirmPassword.Password.Equals(txtPassword.Password) || String.IsNullOrWhiteSpace(txtConfirmPassword.Password))
+            {
+                lbl.Content = " Password fields must contain same passwords!";
+                txtConfirmPassword.Focus();
+            }
+            else if (String.IsNullOrEmpty(txtDisplayFirstName.Text) || String.IsNullOrWhiteSpace(txtDisplayFirstName.Text))
+            {
+                lbl.Content = "First name can't be empty!";
+                txtDisplayFirstName.Focus();
+            }
+            else if (String.IsNullOrEmpty(txtDisplayLastName.Text) || String.IsNullOrWhiteSpace(txtDisplayLastName.Text))
+            {
+                lbl.Content = "Last name can't be empty!";
+                txtDisplayLastName.Focus();
+            }
+
+
+            else
+            {
+                _cs.regUser(user);
+                MessageBox.Show("Successfully registered!");
+                this.Close();
+            }
+        } 
+
+        private List<String> getExistingUsers(List<String> existingUsernames)
+        {
+            //List of existing usernames --> Connection.GetExistingUsernames()
+            existingUsernames = _cs.getExistingUsernames();
+            return existingUsernames;
+        }
+
+        private Users populateUserData(Users user)
+        {
+            //Assigning text fields values to string values
             String firstName = txtDisplayFirstName.Text;
             String lastName = txtDisplayLastName.Text;
             String company = txtCompanyName.Text;
@@ -61,42 +135,24 @@ namespace firstWpfapp
             String password = txtPassword.Password;
             String confirmPassword = txtConfirmPassword.Password;
             DateTime regDate = DateTime.Now;
-            Users user = new Users();
 
-            //Thread which displays error messages if txt fields are faulty.
-            Dispatcher.Invoke(new Action(() => { values(); }), DispatcherPriority.ContextIdle);
 
-            if (firstName.Length < 2 || lastName.Length < 2 ||
-                   company.Length < 2 || position.Length < 2 ||
-                  username.Length < 4 ||
-                  password.Length < 6 ||
-                 !confirmPassword.Equals(password))
-            {
-                MessageBox.Show("Please verify the fields or click the support button next to Registration!");
-            }
+            user.setFirstName(firstName);
+            user.setLastName(lastName);
+            user.setUsername(username);
+            user.setPassword(password);
+            user.setCompany(company);
+            user.setPosition(position);
+            user.setRegDate(regDate);
 
-            
-            else
-            {
-                user.setFirstName(firstName);
-                user.setLastName(lastName);
-                user.setUsername(username);
-                user.setPassword(password);
-                user.setCompany(company);
-                user.setPosition(position);
-                user.setRegDate(regDate);
-                _cs.regUser(user);
-                MessageBox.Show("Successfully registered!");
-                this.Close();
-            }
-            
-
+            return user;
         }
 
-        private void values()
+
+     /*   private void values()
         {
 
-            List<String> ErrorMessages = new List<String>();
+            List<String> ErrorMessages = new List<String>(6);
             //first name
             if (txtDisplayFirstName.Text.Length <= 2)
             {
@@ -137,15 +193,24 @@ namespace firstWpfapp
             {
                 txtPassword.Password = " ";
                 txtPassword.Foreground = Brushes.Red;
-                MessageBox.Show("Please ensure your password is at least 6 symbols!");
             }
             //confirm password
             if (!txtConfirmPassword.Password.Equals(txtPassword.Password))
             {
                 txtConfirmPassword.Password = " ";
                 txtConfirmPassword.Foreground = Brushes.Red;
-                MessageBox.Show("Please ensure your password fields are identical!");
             }
-        }
+        } */
+
+     /*   private void txtFormatting()
+        {
+            txtDisplayFirstName.Text = "";
+            txtDisplayLastName.Text = "";
+            txtCompanyName.Text = "";
+            txtPosition.Text = "";
+            txtName.Text = "";
+            txtPassword.Password = "";
+            txtConfirmPassword.Password = "";
+        } */
     }
 }

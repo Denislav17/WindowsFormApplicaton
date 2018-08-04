@@ -47,14 +47,11 @@ namespace firstWpfapp
         private void btnViewContacts_Click(object sender, RoutedEventArgs e)
         {
             ContactsBasket cb = new ContactsBasket(_user);
+            cb.Show();
+            this.Close();
         }
 
         private void btnCalendar_Click(object sender, RoutedEventArgs e)
-        {
-            //to implement open form window with calendar
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
         {
             //to implement open form window with calendar
         }

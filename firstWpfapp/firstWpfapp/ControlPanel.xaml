@@ -13,10 +13,11 @@
                 <ColumnDefinition Width="129*"/>
             </Grid.ColumnDefinitions>
             <Grid.Background>
-                <RadialGradientBrush>
-                    <GradientStop Color="Pink" Offset="0"/>
-                    <GradientStop Color="#FF000940" Offset="1"/>
-                </RadialGradientBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Pink" Offset="0.258"/>
+                    <GradientStop Color="#FF2E004D" Offset="0.508"/>
+                    <GradientStop Color="Pink" Offset="0.705"/>
+                </LinearGradientBrush>
             </Grid.Background>
             <Separator HorizontalAlignment="Left" Height="100" Margin="64,233,0,0" VerticalAlignment="Top" Width="558" RenderTransformOrigin="0.5,0.5" Background="White" Grid.ColumnSpan="2">
                 <Separator.RenderTransform>

@@ -190,6 +190,27 @@ namespace firstWpfapp
             userNumberReader.Close();
         }
 
+        public List<String> getExistingUsernames()
+        {
+            List<String> usernames = new List<String>();
+            SqlCommand existingUsernamesCommand;
+            SqlDataReader usernamesReader;
+            String totalAmountQuery;
+
+            totalAmountQuery = "select username from UserData";
+
+            existingUsernamesCommand = new SqlCommand(totalAmountQuery, _DBConnection);
+
+            usernamesReader = existingUsernamesCommand.ExecuteReader();
+
+            while (usernamesReader.Read()) {
+                usernames.Add(usernamesReader.GetValue(0).ToString());
+            }
+
+            usernamesReader.Close();
+            return usernames;
+        }
+
         public void Dispose()
         {
             throw new NotImplementedException();
