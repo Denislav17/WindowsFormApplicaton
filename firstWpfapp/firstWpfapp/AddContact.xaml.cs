@@ -25,9 +25,11 @@ namespace firstWpfapp
 
         public AddContact(Users user)
         {
+
             InitializeComponent();
+
             _user = user;
-            this.Title = "Add Contact to: " + user.getFirstName() + " " + user.getLastName() + "'s contact basket";
+            this.Title = "Add Contact to: " + user.getUsername() + " 's contact basket ";
 
             cs.getExistingUsersData(_listOfUsers);
             fillListOfUsers();
