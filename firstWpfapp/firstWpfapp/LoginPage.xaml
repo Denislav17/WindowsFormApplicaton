@@ -22,7 +22,7 @@
         <TextBox x:Name="txtName" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Height="32" Margin="241,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Foreground="White" FontFamily="Lato Light" Background="Transparent" FontSize="18" BorderBrush="White" BorderThickness="2" />
         <Label x:Name="lbl" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="142,301,0,0" FontSize="16" FontFamily="Lato Light" FontWeight="Bold" Foreground="White" Background="Transparent" RenderTransformOrigin="-0.214,1" Width="349" HorizontalContentAlignment="Center" />
         <PasswordBox x:Name="txtPassword" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Height="32" Margin="241,161,0,0"  VerticalAlignment="Top" Width="250" Foreground="White" FontFamily="Lato Light" Background="Transparent" FontSize="18" BorderThickness="2" BorderBrush="White"/>
-        <Image HorizontalAlignment="Left" Height="179" Margin="142,-111,0,0" VerticalAlignment="Top" Width="349" Source="C:\Users\my\Desktop\logo.png"/>
+        <Image HorizontalAlignment="Left" Height="179" Margin="142,-111,0,0" VerticalAlignment="Top" Width="349" Source="E:\appImages\logo.png"/>
 
     </Grid>
 </Window>

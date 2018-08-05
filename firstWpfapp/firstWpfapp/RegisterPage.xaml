@@ -20,7 +20,7 @@
         </Grid.Background>
         <Grid HorizontalAlignment="Left" Height="647" Margin="25,62,0,0" VerticalAlignment="Top" Width="659" Grid.RowSpan="2">
             <!-- Images -->
-            <Image HorizontalAlignment="Left" Height="115" Margin="224,-48,0,0" VerticalAlignment="Top" Width="229" Source="C:\Users\my\Desktop\logo.png"/>
+            <Image HorizontalAlignment="Left" Height="115" Margin="224,-48,0,0" VerticalAlignment="Top" Width="229" Source="E:\appImages\logo.png"/>
             <Button x:Name="btnSupport" HorizontalAlignment="Left" Margin="24,522,0,0" VerticalAlignment="Top" Width="36" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="35" Click="btnSupport_Click"/>
             <!-- First Name -->
             <Label  x:Name="lblDisplayFirstName" Content="First Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="79,99,0,0" VerticalAlignment="Top" Width="97" Height="36" FontFamily="Lato Light" FontSize="16" FontWeight="Bold" Foreground="White"/>
