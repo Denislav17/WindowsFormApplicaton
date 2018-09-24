@@ -25,7 +25,7 @@ namespace firstWpfapp
 
         public AddContact(Users user)
         {
-
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
 
             _user = user;
@@ -59,6 +59,10 @@ namespace firstWpfapp
             {
                 cs.addToUserContactBasket(_user, _listOfUsers[existingUsersList.SelectedIndex]);
                 MessageBox.Show("User has been successfully added to your contact list.");
+                ControlPanel cp = new ControlPanel(_user);
+                cp.Show();
+                this.Close();
+
             }
             catch (Exception)
             {

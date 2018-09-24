@@ -21,3 +21,26 @@ C:\Users\my\source\repos\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.csproj.Ge
 C:\Users\my\source\repos\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.csproj.CoreCompileInputs.cache
 C:\Users\my\source\repos\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.exe
 C:\Users\my\source\repos\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.pdb
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\bin\Debug\firstWpfapp.exe.config
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\bin\Debug\firstWpfapp.exe
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\bin\Debug\firstWpfapp.pdb
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.csprojAssemblyReference.cache
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\AddContact.g.cs
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\ContactsBasket.g.cs
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\ControlPanel.g.cs
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\LoginPage.g.cs
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\RegisterPage.g.cs
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\App.g.cs
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp_MarkupCompile.cache
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp_MarkupCompile.lref
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\AddContact.baml
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\ContactsBasket.baml
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\ControlPanel.baml
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\LoginPage.baml
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\RegisterPage.baml
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.g.resources
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.Properties.Resources.resources
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.csproj.GenerateResource.cache
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.csproj.CoreCompileInputs.cache
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.exe
+C:\Users\my\Documents\GitHub\WPF SMBC Project\WindowsFormApplicaton\firstWpfapp\firstWpfapp\obj\Debug\firstWpfapp.pdb
