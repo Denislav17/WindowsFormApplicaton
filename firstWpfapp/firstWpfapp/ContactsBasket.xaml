@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:firstWpfapp"
         mc:Ignorable="d"
-        Title="Contacts Basket" Height="403.773" Width="673.857" Background="#FF2E004D" MinWidth="699.857" MinHeight="489.202" WindowStyle="ThreeDBorderWindow" Visibility="Visible" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+        Title="Contacts Basket" Height="615.773" Width="673.857" Background="#FF2E004D" MinWidth="699.857" MinHeight="489.202" WindowStyle="ThreeDBorderWindow" Visibility="Visible" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
 
     <Grid Margin="0,0,0,0">
-        <Grid x:Name="grid"  HorizontalAlignment="Left" Height="459" VerticalAlignment="Top" Width="693" Margin="0,0,-16,-9">
+        <Grid x:Name="grid"  HorizontalAlignment="Left" Height="587" VerticalAlignment="Top" Width="693">
             <Grid.Background>
                 <LinearGradientBrush>
                     <GradientStop Color="Pink" Offset="0.258"/>
@@ -16,23 +16,28 @@
                     <GradientStop Color="Pink" Offset="0.705"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Grid HorizontalAlignment="Left" Height="371" Margin="425,32,0,0" VerticalAlignment="Top" Width="217">
+            <Grid HorizontalAlignment="Left" Height="362" Margin="232,154,0,0" VerticalAlignment="Top" Width="247">
                 <Grid.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="Transparent" Offset="0.379"/>
                         <GradientStop Color="Transparent" Offset="1.2"/>
                     </RadialGradientBrush>
                 </Grid.Background>
-                <Image HorizontalAlignment="Left" Height="112" Margin="54,27,0,0" VerticalAlignment="Top" Width="114" Source="C:\Users\my\Desktop\contacticon.png"/>
-                <TextBox BorderBrush="White" BorderThickness="2.5" x:Name="txtFirstName" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="30" Margin="10,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"/>
-                <TextBox BorderBrush="White" BorderThickness="2.5" x:Name="txtLastName" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Height="31" Margin="10,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"/>
-                <TextBox BorderBrush="White" BorderThickness="2.5" x:Name="txtCompany" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="31" Margin="10,261,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197"  FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"/>
-                <TextBox BorderBrush="White" BorderThickness="2.5" x:Name="txtPosition" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="30" Margin="10,310,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"/>
+                <TextBox BorderBrush="White" BorderThickness="2.5" x:Name="txtFirstName" HorizontalContentAlignment="Center" Height="30" Margin="10,165,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"/>
+                <TextBox BorderBrush="White" BorderThickness="2.5" x:Name="txtLastName" HorizontalContentAlignment="Center"  HorizontalAlignment="Left" Height="31" Margin="10,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="227" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"/>
+                <TextBox BorderBrush="White" BorderThickness="2.5" x:Name="txtCompany" HorizontalContentAlignment="Center" Height="31" Margin="10,261,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"/>
+                <TextBox BorderBrush="White" BorderThickness="2.5" x:Name="txtPosition" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="30" Margin="10,310,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="227" FontFamily="Lato Light" FontSize="16" Background="Transparent" Foreground="White"/>
             </Grid>
-            <ComboBox x:Name="usersList"  HorizontalAlignment="Left" Margin="98,117,0,0" VerticalAlignment="Top" Width="247" Height="24" SelectionChanged="usersList_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxDropDownHeight="190" />
-            <Label x:Name="lblSelectUser" Content="Select a contact" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="130,60,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="24" Foreground="White" Height="41" Width="180" />
+            <ComboBox x:Name="usersList"  HorizontalAlignment="Left" Margin="227,107,0,0" VerticalAlignment="Top" Width="252" Height="24" SelectionChanged="usersList_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxDropDownHeight="190" />
+            <Label x:Name="lblSelectUser" Content="Browse Contacts" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="227,61,0,0" VerticalAlignment="Top" FontFamily="Lato Light" FontSize="24" Foreground="White" Height="41" Width="247" />
+            <Image Source="C:\Users\my\Desktop\profile icon.png" HorizontalAlignment="Left" Height="166" Margin="256,154,0,0" VerticalAlignment="Top" Width="218" RenderTransformOrigin="-0.102,0.562"/>
+            <Label FontFamily="Lato Light" FontSize="18" Foreground="White" Height="30" Width="144" HorizontalContentAlignment="Center" Content="First Name" HorizontalAlignment="Left" Margin="83,320,0,0" VerticalAlignment="Top"/>
+            <Label FontFamily="Lato Light" FontSize="18" Foreground="White" Height="30" Width="144" HorizontalContentAlignment="Center" Content="Last Name" HorizontalAlignment="Left" Margin="83,370,0,0" VerticalAlignment="Top"/>
+            <Label FontFamily="Lato Light" FontSize="18" Foreground="White" Height="30" Width="144" HorizontalContentAlignment="Center" Content="Company Name" HorizontalAlignment="Left" Margin="83,418,0,0" VerticalAlignment="Top"/>
+            <Label FontFamily="Lato Light" FontSize="18" Foreground="White" Height="30" Width="144" HorizontalContentAlignment="Center" Content="Position" HorizontalAlignment="Left" Margin="83,466,0,0" VerticalAlignment="Top"/>
+
         </Grid>
-        <Button x:Name="btnGoBack" HorizontalAlignment="Left" VerticalAlignment="Top" Width="77" Margin="20,402,0,0" Background="Transparent" BorderBrush="Transparent" Height="38" Click="btnBack_Click">
+        <Button x:Name="btnGoBack" HorizontalAlignment="Left" VerticalAlignment="Top" Width="77" Margin="300,530,0,0" Background="Transparent" BorderBrush="Transparent" Height="38" Click="btnBack_Click">
             <Image Source="E:\appImages\btnBack.png" />
         </Button>
     </Grid>
